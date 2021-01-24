@@ -46,13 +46,13 @@ visualization<br>
   of errors per kLOC<br>
   groupedClassData - groups based on matching courseId, teacher, semester,
 assignmentNo, SubmissionNo<br>
-▪ Intended to get one row for every submission number per class to make it easier
+Intended to get one row for every submission number per class to make it easier
 for visualization<br>
-▪ Adds a few metrics like number of severity X errors and calculates the number
+Adds a few metrics like number of severity X errors and calculates the number
 of errors per kLOC, also adds stuck levels and number of students who
 submitted<br>
-o groupedClassDataByDate – exact same as groupedClassData except it uses submission
+  groupedClassDataByDate – exact same as groupedClassData except it uses submission
 time instead of submission number, it is aggregated such that only the most recent
 submissions are considered<br>
-• Then, once the user selects the load view button and either teacher or student view, it will
+Then, once the user selects the load view button and either teacher or student view, it will
 generate the charts for that view<br>
