@@ -25,29 +25,29 @@ displayed on the charts
 • Charts are either displayed by submission number or over time
 • For more info about a certain chart, hover over the data points to see the tooltips
 
-Part 3) Code Notes
-• Once it receives a file to process, it parses the csv file using PapaParse library and generates a
+Part 3) Code Notes (Implementation Details):
+Once it receives a file to process, it parses the csv file using PapaParse library and generates a
 google.visualization.DataTable out of the results
-o It is currently programmed to take in the following columns for the csv in the following
+  It is currently programmed to take in the following columns for the csv in the following
 order: CourseID (string but will usually be a CRN num), Teacher (string), Semester
 (string), AssignmentNo (string with project name), subjectID (string with subject
 identifier), SubmissionNo (number), SubmissionTime (string timestamp in the form
 MM/DD/YY 11:30PM), Lines of Code (number), severity (number 1 – 4), category
 (string), ClassName (string), FileName (string), MethodName (string), Line (number), Col
 (number), Error (string)
-o If columns are changed, you will have to update the JSON objects and isColNumeric()
+  If columns are changed, you will have to update the JSON objects and isColNumeric()
 function
-▪ If additional identifiers are added (like semester, teacher, student, etc), the
+If additional identifiers are added (like semester, teacher, student, etc), the
 generation functions may have to be updated as well to account for these
-• It then creates three more google.visualization.DataTable for different ways of aggregating the
+It then creates three more google.visualization.DataTable for different ways of aggregating the
 DataTable (columns can be found in JSON object at top of .js file)
-o groupedData – groups based on matching courseId, teacher, semester, assignmentNo,
-subjectID, SubmissionNo
-▪ Intended to get one row for every student submission to make it easier for
+  groupedData – groups based on matching courseId, teacher, semester, assignmentNo,
+  subjectID, SubmissionNo
+Intended to get one row for every student submission to make it easier for
 visualization
-▪ Adds a few metrics like number of severity X errors and calculates the number
-of errors per kLOC
-o groupedClassData - groups based on matching courseId, teacher, semester,
+  Adds a few metrics like number of severity X errors and calculates the number
+  of errors per kLOC
+  groupedClassData - groups based on matching courseId, teacher, semester,
 assignmentNo, SubmissionNo
 ▪ Intended to get one row for every submission number per class to make it easier
 for visualization
