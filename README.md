@@ -1,5 +1,6 @@
 # error-dashboard
 This project takes data from WebCAT about student's errors in coding projects and displays it into a visual dashboard using HTML, JavaScript, Google Charts, and Bootstrap. 
+
 By: Trevor Miller
 
 How to Use:
@@ -23,29 +24,7 @@ displayed on the charts
 • Errors per 1000 lines of code is a common measurement used in almost all the visuals
 • Charts are either displayed by submission number or over time
 • For more info about a certain chart, hover over the data points to see the tooltips
-• Student View:
-o Two stacked area charts for how the student is progressing a) over time and b) by
-submission number
-o Two stacked area charts for how the class is progressing a) over time and b) by
-submission number
-o Bar chart showing the frequency of each error in the student’s most recent submission
-o Two line charts showing how the student is progressing vs the class 25, 50, 75th
-percentiles
-o Line chart comparing how students are doing compared to their other projects
-o Chart showing how many submissions the class has made and their stuck levels on those
-submissions both over time and by submission number
-• Teacher View
-o Stacked bar chart showing the top 20 students with the most errors in terms of number
-of errors/ kLOC
-o Stacked bar chart showing the top 20 students with the most errors in terms of “stuck
-level”
-o Bar chart showing the total frequency of each error for all submissions
-o Line charts showing how current project compares to other class’ performances on
-same project and to other projects within the same class
-o Two stacked area charts for how the class is progressing a) over time and b) by
-submission number
-o Chart showing how many submissions the class has made and their stuck levels on those
-submissions both over time and by submission number
+
 Part 3) Code Notes
 • Once it receives a file to process, it parses the csv file using PapaParse library and generates a
 google.visualization.DataTable out of the results
