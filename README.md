@@ -6,7 +6,7 @@ By: Trevor Miller
 
 URL: https://error-dashboard-webcat.web.app/
 
-!(image)(./public/dashboard.PNG)
+![image](./public/dashboard.PNG)
 
 How to Use:
 
