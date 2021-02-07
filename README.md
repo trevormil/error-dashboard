@@ -3,9 +3,13 @@ This project takes data from WebCAT about student's errors in coding projects an
 
 By: Trevor Miller
 
+URL: https://error-dashboard-webcat.web.app/
+
+!(image)(./dashboard.PNG)
+
 How to Use:
 1. Load the dashboard.html file in a browser which should be in the same folder as the papaparse
-files and build-charts.js
+files and build-charts.js, or click on URL above
 2. Enter the csv file (sample file should be in the samplefiles folder, for best results, I would
 recommend looking at ‘Lab01’ for Project, ‘12751’ for Class, and ‘s00001’ for student because
 that is the most complete data point). Note: The data generation is not part of this project. It is
