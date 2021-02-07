@@ -1,14 +1,36 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <title>WebCAT Error Dashboard</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.2.6/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.2.6/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.2.6/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.2.6/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.2.6/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.2.6/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.2.6/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.2.6/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.2.6/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.2.6/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/charts/loader.js"></script>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./build-charts.js"></script>
     <script src="papaparse/papaparse.min.js"></script>
-    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="./mystyle.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
   <body>
@@ -23,9 +45,7 @@
             <div class="row">
               <h3>Enter your info:</h3>
             </div>
-            <div class="row">
-              <p>Enter all info that applies. Note: Project input is mandatory.</p>
-            </div>
+            
             <div class="row">
               <div id="inputs">
                 <div class="row">
@@ -50,6 +70,20 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <p>Enter all info that applies. Note: Project input is mandatory.</p>
+        </div>
+        
+        <div class="row">
+          
+          <a href="./samplefiles/error-sample-2.csv" download>
+            <p>Click here for sample .csv file.</p>
+          </a>
+          
+        </div>
+        <div class="row">
+          <p>For best results, Project="Program06" CRN="12751" and Student="s00001"</p>
+        </div>
         <hr>
         <div class="row">
           <div id="viewselect">
@@ -64,6 +98,10 @@
           </div>
         </div>
       </form>
+     
+      
+      
+      
       <hr>
       <div class="row">
         <h4 id="dashboard_title"></h4>
@@ -165,5 +203,6 @@
         </div>
       </div>
     </div>
+    
   </body>
 </html>
